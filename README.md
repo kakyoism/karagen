@@ -1,6 +1,6 @@
 # karagen
 
-Extract instrumental track from a song
+Extract instrumental track from a song, based on Deezer Spleeter.
 
 ## Getting Started
 
