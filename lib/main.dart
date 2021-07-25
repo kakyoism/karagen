@@ -73,6 +73,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _onSubmit() async {
     // modal progress
     uiutil.openProgressUI(context, 'Working ...');
+    // spleeter separate -p spleeter:2stems -o output audio_example.mp3
+    var result = await Process.run('spleeter',
+        ['separate', '-p', 'spleeter:2stems', '-b', '320k', '-o', 'D:\\kakyo\\_dev\\karagen\\build\\windows\\runner\\Debug\\output', _songPath]);
+    print('status: ${result.exitCode}');
+    print('stdout: ${result.stdout}');
+    print('stderr: ${result.stderr}');
     uiutil.closeProgressUI(context);
   }
 
