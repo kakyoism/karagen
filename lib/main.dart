@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _onSelectOutDir() async {
     final String? dirPath = await getDirectoryPath(
       initialDirectory: _outDirPath,
-      confirmButtonText: 'Select Output Folder',
+      confirmButtonText: 'Select Folder',
     );
     setState(() {
       _outDirPath = dirPath ?? 'You haven\'t picked an output folder *_^';
