@@ -5,7 +5,7 @@
 What `karagen` is
 
 - A frontend of `Spleeter`
-- A workflow customized to serve karaoke enthusiasts who have trouble finding the official accompaniment of their favourite songs, and want to build their own versions easily
+- A workflow customized to serve karaoke enthusiasts who have trouble finding the official instrumental version of their favourite songs
 
 What `karagen` is NOT
 
