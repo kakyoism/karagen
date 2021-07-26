@@ -49,7 +49,7 @@ Let's work on our next hit cover `^_^`.
 
 v0.1.4
 
-- Fixed: Child process fails when paths contains unicode characters
+- Fixed: Child process fails when paths contain unicode characters
 - Fixed: Long text goes beyond window boundary
 
 v0.1.3
