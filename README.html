@@ -180,19 +180,21 @@
 <li><code>vocal.wav</code></li>
 </ul>
 <p>The first file is what you want. Congratulations! Now you have your pseudo-instrumental version of your favourite song.</p>
-<p>Let’s work on our next SSS-class cover <code>^_^</code>.</p>
+<p>Let’s work on our next hit cover <code>^_^</code>.</p>
 <h2 id="limitations-and-future-work">Limitations and Future Work</h2>
 <ul>
 <li><code>Spleeter</code> needs to retrieve machine learning models from remote cloud services, so it requires stable internet connection (possible with a VPN in some countries), at least the first time.</li>
 <li>We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to mix in the original segments, using an external audio editor app such as <a href="https://www.audacityteam.org/"><code>Audacity</code></a>.</li>
 <li>We use the default parameters for the underlying algorithm, which isn’t always perfect. For simplicity, we postpone the implementation of the parameter tweaks for power users until absolutely needed.</li>
 <li>The output audio quality is bound by your input audio quality. Prefer using higher fidelity version of the song as your input file. Don’t expect a better result just because the output format is <code>.wav</code> but your input is a low-bitrate <code>.mp3</code>.</li>
+<li>Batch processing will be supported in future releases.</li>
 </ul>
 <h2 id="releases">Releases</h2>
 <p>v0.1.3</p>
 <ul>
 <li>Added installer for Windows</li>
 <li>Minor UI tweaks</li>
+<li>Added app icon</li>
 </ul>
 <p>v0.1.2</p>
 <ul>

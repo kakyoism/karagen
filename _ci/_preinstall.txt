@@ -1,0 +1,15 @@
+Disclaimer
+===========
+
+This installer will
+
+- install third-party dependencies onto your computer, i.e.,
+	- Python 3.8, from python.org
+	- Spleeter, from github.com/deezer/spleeter
+	- ffmpeg, from ffmpeg.org and github.com/BtbN
+	- libsndfile, from www.mega-nerd.com/libsndfile
+- modify the system PATH variable to run dependency programs
+
+We are not responsible for the possible unwanted behaviours that those dependencies and their own dependencies may incur.
+
+If you do NOT agree to the above, please QUIT the installation now.

@@ -6,6 +6,7 @@
 #define MyAppPublisher "kakyoism.com"
 #define MyAppURL "https://github.com/kakyoism/karagen"
 #define MyAppExeName "karagen.exe"
+#define MyRootDir "D:\kakyo\_dev"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -20,14 +21,14 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
-LicenseFile=D:\kakyo\_dev\karagen\LICENSE
-InfoBeforeFile=D:\kakyo\_dev\karagen\_ci\_prebuild.txt
+LicenseFile={#MyRootDir}\karagen\LICENSE
+InfoBeforeFile={#MyRootDir}\karagen\_ci\_preinstall.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
-OutputDir=D:\kakyo\_dev\karagen\build\windows
+OutputDir={#MyRootDir}\karagen\build\windows
 OutputBaseFilename=install_karagen
-SetupIconFile=D:\kakyo\_dev\karagen\assets\parrot.ico
+SetupIconFile={#MyRootDir}\karagen\_assets\app_icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -38,12 +39,21 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
+[Run]
+Filename: "{app}\_dep\_postinstall.bat"; Description: "{cm:T_PostBuild}"; Flags: nowait postinstall skipifsilent
+
+[CustomMessages]
+T_PostBuild=Run Post-Build script to install dependencies: ffmpeg, libsndfile.
+
 [Files]
-Source: "D:\kakyo\_dev\karagen\build\windows\runner\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\kakyo\_dev\karagen\build\windows\runner\Release\file_selector_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\kakyo\_dev\karagen\build\windows\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\kakyo\_dev\karagen\build\windows\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "D:\kakyo\_dev\karagen\build\windows\runner\Release\pretrained_models\*"; DestDir: "{app}\pretrained_models"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MyRootDir}\karagen\build\windows\runner\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyRootDir}\karagen\build\windows\runner\Release\file_selector_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyRootDir}\karagen\build\windows\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyRootDir}\karagen\build\windows\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MyRootDir}\karagen\build\windows\runner\Release\pretrained_models\*"; DestDir: "{app}\pretrained_models"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MyRootDir}\karagen\_ci\_3rdparty\*"; DestDir: "{app}\_dep"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MyRootDir}\karagen\_ci\_postinstall.bat"; DestDir: "{app}\_dep"; Flags: ignoreversion
+Source: "{#MyRootDir}\karagen\_ci\_postinstall.py"; DestDir: "{app}\_dep"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
