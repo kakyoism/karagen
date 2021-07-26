@@ -1,16 +1,49 @@
 # karagen
 
-Extract instrumental track from a song, based on Deezer Spleeter.
+Extract the accompaniment track from a song, powered by [`Deezer Spleeter`](https://research.deezer.com/projects/spleeter.html).
+
+What `karagen` is
+
+- A frontend of `Spleeter`
+- A workflow customized to serve karaoke enthusiasts who have trouble finding the official accompaniment of their favourite songs, and want to build their own versions easily
+
+What `karagen` is NOT
+
+- A full-fledged intelligent solution towards source separation for arbitrary music
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To extract the accompaniment of a song
 
-A few resources to get you started if this is your first Flutter project:
+- Click the button `Pick a Song`. 
+- Find a song using the pop-up file dialog, then click `Select Song`. You should see the message on the right side confirm with the full path to the song file if we succeed.
+- Click the button `Output Folder`.
+- Find a target folder you want using the pop-up file dialog, then click `Select Output Folder`. You should see the message on the right side confirm with the full path to the song file if we succeed.
+- Click the floating `+` button at the bottom right of the window. The background worker will start doing the real work. 
+- Wait till the background worker finishes its job.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+If all went well, the system explorer will open the output folder, where you should see
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `accompaniment.wav`
+- `vocal.wav`
+
+The first file is what you want. Congratulations! Now you have your pseudo-instrumental version of your favourite song. 
+
+Let's start working on our SSS-class cover `^_^`.
+
+## Limitations and Future Work
+
+- We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to mix in the original segments, using an external audio editor app such as [`Audacity`](https://www.audacityteam.org/). 
+- We use the default parameters for the underlying algorithm, which isn't always perfect. For simplicity, we postpone the implementation of the parameter tweaks for power users until absolutely needed.
+
+## Releases
+
+v0.1.1
+
+- Generating accompaniment
+- Opening output folder automatically
+
+## Contact
+
+The issue tracker: https://github.com/kakyoism/karagen/issues
+
