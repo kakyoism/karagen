@@ -31,7 +31,7 @@ If all went well, the system explorer will open the output folder, where you sho
 
 The first file is what you want. Congratulations! Now you have your pseudo-instrumental version of your favourite song. 
 
-Let's work on our next SSS-class cover `^_^`.
+Let's work on our next hit cover `^_^`.
 
 
 
@@ -50,6 +50,7 @@ v0.1.3
 
 - Added installer for Windows
 - Minor UI tweaks
+- Added app icon
 
 v0.1.2
 
