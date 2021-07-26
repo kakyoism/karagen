@@ -18,9 +18,9 @@ What `karagen` is NOT
 To extract the accompaniment of a song
 
 - Click the button `Pick a Song`. 
-- Find a song using the pop-up file dialog, then click `Select Song`. You should see the message on the right side confirm with the full path to the song file if we succeed.
+- Find a song using the pop-up file dialog, then click `Select Song`. On its right side, you should see the the full path to the song file if we succeed.
 - Click the button `Output Folder`.
-- Find a target folder you want using the pop-up file dialog, then click `Select Folder`. You should see the message on the right side confirm with the full path to the song file if we succeed.
+- Find a target folder you want using the pop-up file dialog, then click `Select Folder`. On its right side, you should see the full path to the output folder if we succeed.
 - Click the floating `+` button at the bottom right of the window. The background worker will start doing the real work. 
 - Wait till the background worker finishes its job.
 
