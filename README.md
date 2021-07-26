@@ -47,6 +47,11 @@ Let's work on our next hit cover `^_^`.
 
 ## Releases
 
+v0.1.4
+
+- Fixed: Child process fails when paths contains unicode characters
+- Fixed: Long text goes beyond window boundary
+
 v0.1.3
 
 - Added installer for Windows

@@ -46,6 +46,7 @@ Filename: "{app}\_dep\_postinstall.bat"; Description: "{cm:T_PostBuild}"; Flags:
 T_PostBuild=Run Post-Build script to install dependencies: ffmpeg, libsndfile.
 
 [Files]
+Source: "{#MyRootDir}\karagen\README.html"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyRootDir}\karagen\build\windows\runner\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyRootDir}\karagen\build\windows\runner\Release\file_selector_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyRootDir}\karagen\build\windows\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
