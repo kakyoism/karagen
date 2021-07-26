@@ -1,6 +1,6 @@
 # karagen
 
-Extract the accompaniment track from a song, powered by [`Deezer Spleeter`](https://research.deezer.com/projects/spleeter.html).
+`karagen` *extracts* the accompaniment track from a song, powered by [`Deezer Spleeter`](https://research.deezer.com/projects/spleeter.html).
 
 What `karagen` is
 
@@ -29,12 +29,13 @@ If all went well, the system explorer will open the output folder, where you sho
 
 The first file is what you want. Congratulations! Now you have your pseudo-instrumental version of your favourite song. 
 
-Let's start working on our SSS-class cover `^_^`.
+Let's work on our next SSS-class cover `^_^`.
 
 ## Limitations and Future Work
 
 - We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to mix in the original segments, using an external audio editor app such as [`Audacity`](https://www.audacityteam.org/). 
 - We use the default parameters for the underlying algorithm, which isn't always perfect. For simplicity, we postpone the implementation of the parameter tweaks for power users until absolutely needed.
+- The output audio quality is bound by your input audio quality. Prefer using higher fidelity version of the song as your input file. Don't expect a better result just because the output format is `.wav` but your input is a low-bitrate `.mp3`.
 
 ## Releases
 

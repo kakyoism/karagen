@@ -18,6 +18,11 @@ if NOT %errorlevel% == 0 (
     echo "Failed to build GUI"
     goto :fail
 )
+pandoc -s -o README.html README.md --metadata title="karagen: User Guide"
+if NOT %errorlevel% == 0 (
+    echo "Failed to build user doc"
+    goto :fail
+)
 echo ** SUCCEEDED **
 popd
 goto :EOF
