@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
       '320k',
       '-o',
       _outDirPath,
-      _songPath
+      '$_songPath'
     ]);
     print('status: ${result.exitCode}');
     print('stdout: ${result.stdout}');
