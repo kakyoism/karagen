@@ -50,8 +50,8 @@ Source: "{#MyRootDir}\karagen\build\windows\runner\Release\{#MyAppExeName}"; Des
 Source: "{#MyRootDir}\karagen\build\windows\runner\Release\file_selector_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyRootDir}\karagen\build\windows\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyRootDir}\karagen\build\windows\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "{#MyRootDir}\karagen\build\windows\runner\Release\pretrained_models\*"; DestDir: "{app}\pretrained_models"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "{#MyRootDir}\karagen\_ci\_3rdparty\*"; DestDir: "{app}\_dep"; Flags: ignoreversion recursesubdirs createallsubdirs
+; Source: "{#MyRootDir}\karagen\build\windows\runner\Release\pretrained_models\*"; DestDir: "{app}\pretrained_models"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MyRootDir}\karagen\_ci\_3rdparty\*"; DestDir: "{app}\_dep\_3rdparty"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#MyRootDir}\karagen\_ci\_postinstall.bat"; DestDir: "{app}\_dep"; Flags: ignoreversion
 Source: "{#MyRootDir}\karagen\_ci\_postinstall.py"; DestDir: "{app}\_dep"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files

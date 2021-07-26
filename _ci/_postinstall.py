@@ -24,10 +24,10 @@ def main():
 
 
 class Platform:
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args):
         pass
-    @staicmethod
-    def create_platform(self):
+    @staticmethod
+    def create_platform():
         src_dir = _script_dir
         if platform.system() == 'Windows':
             return Windows(src_dir)
@@ -41,32 +41,38 @@ class Platform:
         raise NotImplementedError('subclass this')
 
 
-class Windows:
-    def __init__(self, srcdir, **kwargs):
-        super().__init__(self, srcdir, **kwargs)
+class Windows(Platform):
+    def __init__(self, srcdir):
+        super().__init__(srcdir)
         self.srcDir = srcdir
         self.destParDir = srcdir
 
     def install_ffmpeg(self):
         src = join(self.srcDir, '_3rdparty', 'ffmpeg-win64-lgpl.zip')
-        dest_dir = join(self.destParDir, 'ffmpeg')
+        # zip contains rootdir ffmpeg
+        dest_dir = self.destParDir
         if isfile(join(dest_dir, 'bin', 'ffmpeg.exe')):
             return
         self._unzip(src, dest_dir)
-        append_to_os_paths(join(dest_dir, 'bin'))
+        append_to_os_paths(join(dest_dir, 'ffmpeg', 'bin'))
 
     def install_libsndfile(self):
         src = join(self.srcDir, '_3rdparty', 'libsndfile-win64.zip')
-        dest_dir = join(self.destParDir, 'libsndfile')
+        dest_dir = self.destParDir
         if isfile(join(dest_dir, 'bin', 'sndfile.dll')):
             return
         self._unzip(src, dest_dir)
-        append_to_os_paths(join(dest_dir, 'bin'))
+        append_to_os_paths(join(dest_dir, 'libsndfile', 'bin'))
+
+    def _unzip(self, src, dest):
+        os.makedirs(dest, exist_ok=True)
+        cmd = ['tar', '-xf', src, '-C', dest]
+        _run_cmd(cmd, self.srcDir)
 
 
-class Mac:
-    def __init__(self, *args, **kwargs):
-        super().__init__(self, *args, **kwargs)
+class Mac(Platform):
+    def __init__(self, *args):
+        super().__init__(*args)
 
     def install_ffmpeg(self):
         raise NotImplementedError('imp this')
@@ -96,12 +102,6 @@ def append_to_os_paths(bindir):
         with open(cfg_file, 'a') as fp:
             fp.write(f'\nexport PATH="$PATH:{bindir}"\n\n')
     os.environ['PATH'] += os.pathsep + bindir
-
-
-def _unzip(self, src, dest):
-    os.makedirs(dest, exist_ok=True)
-    cmd = ['tar', '-xf', src, '-C', dest]
-    _run_cmd(cmd, self.setupRoot)
 
 
 def _run_cmd(cmd, cwd):
