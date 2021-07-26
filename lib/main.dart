@@ -169,9 +169,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         onPressed: _onSelectSong,
                         child: const Text('Pick a Song    ')),
                     VerticalDivider(),
-                    Text(
-                      _songPath,
-                      style: Theme.of(context).textTheme.headline5,
+                    Expanded(
+                      child: Text(
+                        _songPath,
+                        style: Theme.of(context).textTheme.headline5,
+                      ),
                     )
                   ],
                 ),
@@ -188,9 +190,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         onPressed: _onSelectOutDir,
                         child: const Text('Output Folder')),
                     VerticalDivider(),
-                    Text(
-                      _outDirPath,
-                      style: Theme.of(context).textTheme.headline5,
+                    Expanded(
+                      child: Text(
+                        _outDirPath,
+                        style: Theme.of(context).textTheme.headline5,
+                      ),
                     )
                   ],
                 ),
