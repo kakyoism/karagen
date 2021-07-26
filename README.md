@@ -29,7 +29,7 @@ If all goes well, the system explorer will open the output folder, where you sho
 - `accompaniment.wav`
 - `vocal.wav`
 
-The first file is what you want. Congratulations! Now you have your pseudo-instrumental version of your favourite song. 
+**The first file is what you want**. Congratulations! Now you have your pseudo-instrumental version of your favourite song. 
 
 Finally, let's start working on our hit cover `^_^`.
 
