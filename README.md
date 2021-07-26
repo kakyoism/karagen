@@ -31,7 +31,7 @@ If all goes well, the system explorer will open the output folder, where you sho
 
 The first file is what you want. Congratulations! Now you have your pseudo-instrumental version of your favourite song. 
 
-Let's start working on our hit cover `^_^`.
+Finally, let's start working on our hit cover `^_^`.
 
 
 
