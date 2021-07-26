@@ -37,7 +37,7 @@ Finally, let's start working on our hit cover `^_^`.
 
 ## Limitations and Future Work
 
-- `Spleeter` needs to retrieve machine learning models from remote services, so it requires a stable internet connection (possiblly with a VPN in some countries), at least the first time. 
+- `Spleeter` needs to retrieve machine learning models from remote services, so it requires a stable internet connection (possiblly with a VPN in some countries), at least on the first run. 
 - We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to mix in the original segments, using an external audio editor app such as [`Audacity`](https://www.audacityteam.org/). 
 - We use the default parameters for the underlying algorithm, which isn't always perfect. For simplicity, we postpone the implementation of the parameter tweaks for power users until absolutely needed.
 - The output audio quality is bound by your input audio quality. Prefer using higher fidelity version of the song as your input file. Don't expect a better result just because the output format is `.wav` but your input is a low-bitrate `.mp3`.
