@@ -44,7 +44,7 @@ class Status {
 
 class _MyHomePageState extends State<MyHomePage> {
   String _songPath = 'You haven\'t picked a song yet ^_*';
-  String _outDirPath = '...';
+  String _outDirPath = 'You haven\'t picked an output folder *_^';
   String _outSongSubDir = '...';
   var _status = Status.PENDING;
   final _colorMap = <int, Color>{
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Status.SUCCESS: Colors.green,
     Status.FAILED: Colors.red,
   };
-  var _resultMsg = 'CLICK the "+" Button~~    You\'ll be taken to the output folder once I\'m done ^_^';
+  var _resultMsg = 'CLICK the "+" Button after picking song/folder ~~    You\'ll be taken to the output folder once I\'m done ^_^';
 
   @override
   void initState() {
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
       confirmButtonText: 'Select Output Folder',
     );
     setState(() {
-      _outDirPath = dirPath ?? 'Invalid folder';
+      _outDirPath = dirPath ?? 'You haven\'t picked an output folder *_^';
     });
   }
 
