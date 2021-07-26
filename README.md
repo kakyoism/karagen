@@ -24,14 +24,14 @@ To extract the accompaniment of a song
 - Click the floating `+` button at the bottom right of the window. The background worker will start doing the real work. 
 - Wait till the background worker finishes its job.
 
-If all went well, the system explorer will open the output folder, where you should see
+If all goes well, the system explorer will open the output folder, where you should see two files
 
 - `accompaniment.wav`
 - `vocal.wav`
 
 The first file is what you want. Congratulations! Now you have your pseudo-instrumental version of your favourite song. 
 
-Let's work on our next hit cover `^_^`.
+Let's start work on our hit cover `^_^`.
 
 
 
