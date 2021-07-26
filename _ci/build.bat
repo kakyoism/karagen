@@ -13,6 +13,15 @@ if NOT %errorlevel% == 0 (
     echo "Failed to install GUI dependencies"
     goto :fail
 )
+
+set myResDir=windows\runner\resources
+mkdir %myResDir%
+copy /Y _assets\app_icon.ico %myResDir%\
+if NOT %errorlevel% == 0 (
+    echo "Failed to deploy icon"
+    goto :fail
+)
+
 start /wait cmd /c "flutter build windows"
 if NOT %errorlevel% == 0 (
     echo "Failed to build GUI"

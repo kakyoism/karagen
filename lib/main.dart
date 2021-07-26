@@ -199,19 +199,34 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: const EdgeInsets.all(8.0),
                 child: Divider(),
               ),
-              Padding(
-                  padding: const EdgeInsets.fromLTRB(horiPad, 30, 8.0, 0),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Hi There :',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30,
-                        color: _colorMap[_status],
-                      ),
-                    ),
-                  )
+              Row(
+                children: [
+                  Padding(
+                      padding: const EdgeInsets.fromLTRB(horiPad, 30, 8.0, 0),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Image.asset('_assets/parrot.png',
+                          width: 60,
+                          height: 60,
+                        )
+                      )
+                  ),
+                  VerticalDivider(),
+                  Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 30, 8.0, 0),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Hi There :',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30,
+                            color: _colorMap[_status],
+                          ),
+                        ),
+                      )
+                  ),
+                ],
               ),
               Padding(
                   padding: const EdgeInsets.fromLTRB(horiPad, 30, 8.0, 0),

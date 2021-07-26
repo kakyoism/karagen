@@ -170,7 +170,7 @@
 <li>Click the button <code>Pick a Song</code>.</li>
 <li>Find a song using the pop-up file dialog, then click <code>Select Song</code>. You should see the message on the right side confirm with the full path to the song file if we succeed.</li>
 <li>Click the button <code>Output Folder</code>.</li>
-<li>Find a target folder you want using the pop-up file dialog, then click <code>Select Output Folder</code>. You should see the message on the right side confirm with the full path to the song file if we succeed.</li>
+<li>Find a target folder you want using the pop-up file dialog, then click <code>Select Folder</code>. You should see the message on the right side confirm with the full path to the song file if we succeed.</li>
 <li>Click the floating <code>+</code> button at the bottom right of the window. The background worker will start doing the real work.</li>
 <li>Wait till the background worker finishes its job.</li>
 </ul>
@@ -183,16 +183,30 @@
 <p>Let’s work on our next SSS-class cover <code>^_^</code>.</p>
 <h2 id="limitations-and-future-work">Limitations and Future Work</h2>
 <ul>
+<li><code>Spleeter</code> needs to retrieve machine learning models from remote cloud services, so it requires stable internet connection (possible with a VPN in some countries), at least the first time.</li>
 <li>We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to mix in the original segments, using an external audio editor app such as <a href="https://www.audacityteam.org/"><code>Audacity</code></a>.</li>
 <li>We use the default parameters for the underlying algorithm, which isn’t always perfect. For simplicity, we postpone the implementation of the parameter tweaks for power users until absolutely needed.</li>
-<li>The output audio quality is bound by your input audio quality. Prefer higher fidelity version of the song as your input file. Don’t expect a better result just because the output format is <code>.wav</code> and your input is a low-bitrate <code>.mp3</code>.</li>
+<li>The output audio quality is bound by your input audio quality. Prefer using higher fidelity version of the song as your input file. Don’t expect a better result just because the output format is <code>.wav</code> but your input is a low-bitrate <code>.mp3</code>.</li>
 </ul>
 <h2 id="releases">Releases</h2>
+<p>v0.1.3</p>
+<ul>
+<li>Added installer for Windows</li>
+<li>Minor UI tweaks</li>
+</ul>
+<p>v0.1.2</p>
+<ul>
+<li>Better user docs</li>
+</ul>
 <p>v0.1.1</p>
 <ul>
 <li>Generating accompaniment</li>
 <li>Opening output folder automatically</li>
 </ul>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<div>
+Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+</div>
 <h2 id="contact">Contact</h2>
 <p>The issue tracker: https://github.com/kakyoism/karagen/issues</p>
 </body>
