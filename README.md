@@ -21,6 +21,7 @@ Windows
 - Double-click the `install_karagen_<version>.exe` to install `karagen`.
 - Accept all prompts when the installer attempt to change your registry key and permissions. 
 - If your anti-virus software prompts to block the installer activities, then do NOT block.
+- At the end of the installation, a post-install script will run automatically. Leave the checkmark on and click finish. Wait till the script finishes its job.
 
 
 macOS
