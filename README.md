@@ -12,15 +12,30 @@ What `karagen` is NOT
 - A full-fledged intelligent solution towards source separation for arbitrary music
 
 
+## Getting Ready
+
+**[WIP] The installer distribution is under construction ...**
+
+Windows
+
+- Double-click the `install_karagen_<version>.exe` to install `karagen`.
+- Accept all prompts when the installer attempt to change your registry key and permissions. 
+- If your anti-virus software prompts to block the installer activities, then do NOT block.
+
+
+macOS
+
+- Double-click the `install_karagen_<version>.pkg` to install `karagen`.
+
 
 ## Getting Started
 
 To extract the accompaniment of a song
 
 - Click the button `Pick a Song`. 
-- Find a song using the pop-up file dialog, then click `Select Song`. On its right side, you should see the the full path to the song file if we succeed.
+- Find a song using the pop-up file dialog, then click `Select Song`. Then the full path to the selected file will appear on the right side of the button.
 - Click the button `Output Folder`.
-- Find a target folder you want using the pop-up file dialog, then click `Select Folder`. On its right side, you should see the full path to the output folder if we succeed.
+- Find a target folder you want using the pop-up file dialog, then click `Select Folder`. Then the full path to the selected folder will appear on the right side of the button.
 - Click the floating `+` button at the bottom right of the window. The background worker will start doing the real work. 
 - Wait till the background worker finishes its job.
 
