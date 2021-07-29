@@ -11,7 +11,6 @@ What `karagen` is NOT
 
 - A full-fledged intelligent solution towards source separation for arbitrary music
 
-
 ## Getting Ready
 
 **[WIP] The installer distribution is under construction ...**

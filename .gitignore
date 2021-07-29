@@ -3,8 +3,9 @@
 #==============
 lock_backend
 *.backend.json
-**/temp
 pretrained_models
+README.html
+**/temp
 _ci/_installer.iss
 
 #===================================
