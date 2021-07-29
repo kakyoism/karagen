@@ -22,6 +22,7 @@ Windows
 - Accept all prompts when the installer attempt to change your registry key and permissions. 
 - If your anti-virus software prompts to block the installer activities, then do NOT block.
 - At the end of the installation, a post-install script will run automatically. Leave the checkmark on and click finish. Wait till the script finishes its job.
+- Ensure Unicode characters all use UTF-8 as their charset. Configure this in Control Panel's `Region`> `Administrative`settings if you have not.
 
 
 macOS
@@ -88,6 +89,26 @@ v0.1.1
 ## Acknowledgements
 
 <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+
+
+## FAQ
+
+### The progress ring seems to spin for ever.
+
+- On the first run, `karagen`'s backend must download data from remove server, which may take a few minutes depending on your internet connection.
+- In some country, you may need a VPN to complete the download.
+- Once the data is fully downloaded, the subsequent runs will be much faster.
+
+### The progress ring spins for a while and then fails.
+
+- Check under `karagen` folder. Do you see `pretrained_models` folder?
+  - If YES, then do you see `2stems` folder? It should contain at least 6 files, one of which is called `checkpoint`; otherwise, delete the `pretrained_models` folder and try again.
+  - If NO, then check our internet connection. 
+
+### The program seems to succeed (or fail) instantly, but I don't see the generated files.
+
+-  Are there Unicode characters in your target file path? On Windows, you must ensure UTF-8 be used as the charset for all Unicode characters. Check this through your Control Panel's Region settings.
 
 
 
