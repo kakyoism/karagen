@@ -5,6 +5,7 @@ lock_backend
 *.backend.json
 **/temp
 pretrained_models
+_ci/_installer.iss
 
 #===================================
 # REAPER

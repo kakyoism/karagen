@@ -1,0 +1,18 @@
+[[package]]
+name = "kkpyutil"
+version = "0.14.1"
+description = "Personal utility functions and classes frequently used by myself for daily Python work."
+category = "main"
+optional = false
+python-versions = ">=3.9,<4.0"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.9"
+content-hash = "93c17a5c2177f2e502d30bfd89a623801eab90e9ce56822fc43ed3fc6017eb57"
+
+[metadata.files]
+kkpyutil = [
+    {file = "kkpyutil-0.14.1-py3-none-any.whl", hash = "sha256:a25062703ce36e8e46f74401a1804620f7859234fc633da706a4b153a1b0554c"},
+    {file = "kkpyutil-0.14.1.tar.gz", hash = "sha256:5fcf2a55693deca96e048b09b76316e916b17dbe33a6c38f3e18565cb9f41d0e"},
+]
