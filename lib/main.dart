@@ -123,7 +123,11 @@ class _MyHomePageState extends State<MyHomePage> {
         _resultMsg = 'Generated: $outSongPath';
       } else {
         _status = 1;
-        _resultMsg = 'Failed! \n- Have you picked a song? :(\n- Is your internet connection OK? You may need a VPN or a proxy :(';
+        _resultMsg = """Failed! 
+- Have you picked a song? :(
+- Is your internet connection OK? You may need a VPN or a proxy :(
+- The pre-cached data may be empty or corrupted :( Try deleting the folder karagen/pretrained_models and run me again  
+""";
       }
     });
 
@@ -144,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     const horiPad = 30.0;
-    final title = '${widget.title}: sing the song you love';
+    final title = '${widget.title}: sing the songs you love';
     return Scaffold(
       appBar: AppBar(
         title: Text(title, style: TextStyle(

@@ -4,6 +4,7 @@
 lock_backend
 *.backend.json
 **/temp
+pretrained_models
 
 #===================================
 # REAPER
