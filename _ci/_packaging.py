@@ -10,15 +10,18 @@ import subprocess
 import sys
 
 import kkpyutil as util
+from _postinstall import run_cmd
 
 _basename = osp.splitext(osp.basename(__file__))[0]
 _script_dir = osp.abspath(osp.dirname(__file__))
-_root_dir = osp.join(_script_dir, os.pardir)
+_root_dir = osp.abspath(osp.join(_script_dir, os.pardir))
 _tmp_dir = osp.join(_root_dir, 'temp')
+_logger = util.build_default_logger(_tmp_dir, name=_basename, verbose=False)
 
 
 def main():
     plat = Platform.get_platform()
+    plat.main()
 
 
 class Platform:
@@ -44,11 +47,16 @@ class Windows(Platform):
         # copy template
         src = osp.join(self.paths['ci'], '_installer.iss.template')
         dest = osp.join(self.paths['ci'], '_installer.iss')
-        shutil.copy()
+        shutil.copy(src, dest)
         # replace root path
         str_map = {
-            'var_root': self.paths['root']
+            'var_rootdir': self.paths['root']
         }
+        util.substitute_keywords_in_file(dest, str_map)
+        # build installer
+        cmd = ['iscc', osp.join(self.paths['ci'], '_installer.iss')]
+        _logger.info(' '.join(cmd))
+        run_cmd(cmd, self.paths['root'])
 
 
 class Mac(Platform):

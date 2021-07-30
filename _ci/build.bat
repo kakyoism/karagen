@@ -32,6 +32,8 @@ if NOT %errorlevel% == 0 (
     echo "Failed to build user doc"
     goto :fail
 )
+
+poetry run python _ci\_packaging.py
 echo ** SUCCEEDED **
 popd
 goto :EOF

@@ -67,7 +67,7 @@ class Windows(Platform):
     def _unzip(self, src, dest):
         os.makedirs(dest, exist_ok=True)
         cmd = ['tar', '-xf', src, '-C', dest]
-        _run_cmd(cmd, self.srcDir)
+        run_cmd(cmd, self.srcDir)
 
 
 class Mac(Platform):
@@ -104,7 +104,7 @@ def append_to_os_paths(bindir):
     os.environ['PATH'] += os.pathsep + bindir
 
 
-def _run_cmd(cmd, cwd):
+def run_cmd(cmd, cwd):
     subprocess.run(cmd, check=True, shell=False, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=cwd)
 
 
