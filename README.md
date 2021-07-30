@@ -63,6 +63,11 @@ Finally, let's start working on our hit cover `^_^`.
 
 ## Releases
 
+v0.1.6
+
+- Added more user docs
+- Added build pipeline on Windows
+
 v0.1.4
 
 - Fixed: Child process fails when paths contain unicode characters
