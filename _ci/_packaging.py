@@ -57,6 +57,8 @@ class Windows(Platform):
         cmd = ['iscc', osp.join(self.paths['ci'], '_installer.iss')]
         _logger.info(' '.join(cmd))
         run_cmd(cmd, self.paths['root'])
+        out_dir = osp.join(self.paths['root'], 'build', 'windows')
+        _logger.info(f'Instaler generated under: {out_dir}')
 
 
 class Mac(Platform):

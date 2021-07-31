@@ -3,7 +3,6 @@
 #==============
 lock_backend
 *.backend.json
-pretrained_models
 README.html
 **/temp
 _ci/_installer.iss

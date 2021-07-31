@@ -13,7 +13,7 @@ from os.path import abspath, basename, dirname, isdir, join, normpath, splitext,
 
 _basename = splitext(basename(__file__))[0]
 _script_dir = abspath(dirname(__file__))
-_root_dir = join(_script_dir, os.pardir)
+_root_dir = abspath(join(_script_dir, os.pardir))
 _tmp_dir = join(_root_dir, 'temp')
 
 
@@ -48,20 +48,11 @@ class Windows(Platform):
         self.destParDir = srcdir
 
     def install_ffmpeg(self):
-        src = join(self.srcDir, '_3rdparty', 'ffmpeg-win64-lgpl.zip')
-        # zip contains rootdir ffmpeg
         dest_dir = self.destParDir
-        if isfile(join(dest_dir, 'bin', 'ffmpeg.exe')):
-            return
-        self._unzip(src, dest_dir)
         append_to_os_paths(join(dest_dir, 'ffmpeg', 'bin'))
 
     def install_libsndfile(self):
-        src = join(self.srcDir, '_3rdparty', 'libsndfile-win64.zip')
         dest_dir = self.destParDir
-        if isfile(join(dest_dir, 'bin', 'sndfile.dll')):
-            return
-        self._unzip(src, dest_dir)
         append_to_os_paths(join(dest_dir, 'libsndfile', 'bin'))
 
     def _unzip(self, src, dest):

@@ -21,7 +21,7 @@ Windows
 - Accept all prompts when the installer attempt to change your registry key and permissions. 
 - If your anti-virus software prompts to block the installer activities, then do NOT block.
 - At the end of the installation, a post-install script will run automatically. Leave the checkmark on and click finish. Wait till the script finishes its job.
-- Ensure Unicode characters all use UTF-8 as their charset. Configure this in Control Panel's `Region`> `Administrative`settings if you have not.
+- If your system uses a non-English locale, then ensure Unicode characters all use UTF-8 as their charset. Check this option in Control Panel's `Region`> `Administrative`settings if you have not.
 
 
 macOS
@@ -53,7 +53,7 @@ Finally, let's start working on our hit cover `^_^`.
 
 ## Limitations and Future Work
 
-- `Spleeter` needs to retrieve machine learning models from remote services, so it requires a stable internet connection (possiblly with a VPN in some countries), at least on the first run. 
+- `Spleeter` needs to retrieve machine learning models from remote services, so it requires a stable internet connection (possiblly with a VPN in some countries), at least on the first run. To reduce the burden, we included a pretrained model in the distribution, but this may fall behind the upstream dev, so you might want to periodically remove the model so that `Spleeter` could have a chance to update it automatically.
 - We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to mix in the original backing-vocal segments, using an external audio editor app such as [`Audacity`](https://www.audacityteam.org/). 
 - We use the default parameters for the underlying algorithm, which isn't always perfect. For simplicity, we postpone the implementation of the parameter tweaks for power users until it proves absolutely necessary.
 - The output audio quality is bound by your input audio quality. Prefer using a high fidelity version of the song as your input file. Don't expect a better result just because the output format is `.wav` but your input is a low-bitrate `.mp3`.
@@ -62,6 +62,10 @@ Finally, let's start working on our hit cover `^_^`.
 
 
 ## Releases
+
+v0.1.7
+
+- Windows: Included dependencies to avoid installation failure due to internet issues
 
 v0.1.6
 
@@ -98,9 +102,9 @@ v0.1.1
 
 ## FAQ
 
-### The progress ring seems to spin for ever.
+### The progress ring seems to spin forever.
 
-- On the first run, `karagen`'s backend must download data from remove server, which may take a few minutes depending on your internet connection.
+- On the first run, `karagen`'s backend must download data from a remove server, which may take a few minutes depending on your internet connection.
 - In some country, you may need a VPN to complete the download.
 - Once the data is fully downloaded, the subsequent runs will be much faster.
 

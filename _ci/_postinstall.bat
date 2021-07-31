@@ -34,11 +34,6 @@ if NOT %errorlevel% == 0 (
     echo "Failed to install dependency: spleeter"
     goto :fail
 )
-%myPythonBin%\pip install spleeter
-if NOT %errorlevel% == 0 (
-    echo "Failed to install dependency: spleeter"
-    goto :fail
-)
 
 REM lazy install ffmpeg and libsndfile and update PATH
 %myPython% _postinstall.py
