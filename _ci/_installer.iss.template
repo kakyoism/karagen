@@ -52,7 +52,7 @@ Source: "{#MyRootDir}\build\windows\runner\Release\{#MyAppExeName}"; DestDir: "{
 Source: "{#MyRootDir}\build\windows\runner\Release\file_selector_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyRootDir}\build\windows\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyRootDir}\build\windows\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "{#MyRootDir}\_ci\_3rdparty\*"; DestDir: "{app}\_dep\_3rdparty"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MyRootDir}\_ci\_3rdparty\windonws"; DestDir: "{app}\_dep\_3rdparty\windows"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#MyRootDir}\_ci\_postinstall.bat"; DestDir: "{app}\_dep"; Flags: ignoreversion
 Source: "{#MyRootDir}\_ci\_postinstall.py"; DestDir: "{app}\_dep"; Flags: ignoreversion
 Source: "{#MyRootDir}\_ci\validate.bat"; DestDir: "{app}\_dep"; Flags: ignoreversion

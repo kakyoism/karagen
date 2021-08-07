@@ -15,7 +15,7 @@ if exist "%myPython%" (
     goto :pypi
 )
 mkdir %myPythonRoot%
-_3rdparty\python-3.8.10-amd64.exe /quiet CompileAll=1 Include_test=0 InstallAllUsers=1 PrependPath=1 TargetDir=%myPythonRoot% 
+_3rdparty\windows\python-3.8.10-amd64.exe /quiet CompileAll=1 Include_test=0 InstallAllUsers=1 PrependPath=1 TargetDir=%myPythonRoot% 
 if NOT %errorlevel% == 0 (
     echo "Failed to install dependencies"
     goto :fail
