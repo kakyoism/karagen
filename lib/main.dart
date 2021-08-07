@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void initOutDir() async {
     Directory docDir = await getApplicationDocumentsDirectory();
-    _outDirPath = pathlib.join(docDir.parent.path, 'Desktop');
+    _outDirPath = pathlib.join(docDir.parent.path, 'Desktop', 'karagen');
   }
 
   @override
@@ -93,11 +93,22 @@ class _MyHomePageState extends State<MyHomePage> {
       confirmButtonText: 'Select Folder',
     );
     setState(() {
-      _outDirPath = dirPath ?? 'You haven\'t picked an output folder *_^';
+      if (dirPath != null) {
+        _outDirPath = pathlib.join(dirPath, 'karagen');
+      }
     });
   }
 
   Future<void> _onSubmit() async {
+    final outDir = Directory(_outDirPath).createSync();
+    var env = Platform.environment;
+    var sysPath = '';
+    if (Platform.isWindows) {
+      sysPath = env['PATH'] ?? 'c:\\python\\python38\\Scripts;c:\\python\\python38';
+    } else if (Platform.isMacOS) {
+      sysPath = '/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/Cellar/libsndfile/1.0.28/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:';
+    }
+
     // modal progress
     uiutil.openProgressUI(context, 'Working ...');
     // spleeter separate -p spleeter:2stems -o output audio_example.mp3
@@ -110,10 +121,19 @@ class _MyHomePageState extends State<MyHomePage> {
       '-o',
       _outDirPath,
       '$_songPath'
-    ]);
-    print('status: ${result.exitCode}');
-    print('stdout: ${result.stdout}');
-    print('stderr: ${result.stderr}');
+    ], workingDirectory: _outDirPath,
+    environment: {
+      'PATH': sysPath,
+    });
+    // print('status: ${result.exitCode}');
+    // print('stdout: ${result.stdout}');
+    // print('stderr: ${result.stderr}');
+    // final outfile = File(pathlib.join(outDirPath, 'stdout.txt'));
+    // final errfile = File(pathlib.join(outDirPath, 'stderr.txt'));
+    // final envfile = File(pathlib.join(outDirPath, 'stdenv.txt'));
+    // await outfile.writeAsString(result.stdout);
+    // await errfile.writeAsString(result.stderr);
+    // await envfile.writeAsString(Platform.environment['PATH'].toString());
     uiutil.closeProgressUI(context);
 
     setState(() {
