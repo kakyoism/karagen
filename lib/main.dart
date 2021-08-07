@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (Platform.isWindows) {
       sysPath = env['PATH'] ?? 'c:\\python\\python38\\Scripts;c:\\python\\python38';
     } else if (Platform.isMacOS) {
-      sysPath = '/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/Cellar/libsndfile/1.0.28/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:';
+      sysPath = '/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:';
     }
 
     // modal progress
