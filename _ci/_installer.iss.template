@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "karagen"
-#define MyAppVersion "0.2.0"
+#define MyAppVersion "0.2.1"
 #define MyAppPublisher "kakyoism.com"
 #define MyAppURL "https://github.com/kakyoism/karagen"
 #define MyAppExeName "karagen.exe"
