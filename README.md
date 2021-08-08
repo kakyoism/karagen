@@ -50,6 +50,7 @@ To extract the accompaniment of a song, you must follow the platform-specific pr
 - The first run will likely fail upfront, and you'll be prompted that `libsndfile.dylib` is  not trusted. Don't worry. Simply head for `System Preferences > Security & Privacy > General` to enable it.
 - Repeat the first two steps and the progress cogwheel will start spinning, showing `karagen` is at work.
 - Wait till the background worker finishes its job.
+- Note that the output folder is always `~/Desktop/karagen`.
 
 ### Results
 
