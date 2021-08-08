@@ -28,7 +28,7 @@ class Platform:
         pass
     @staticmethod
     def create_platform():
-        src_dir = _script_dir
+        src_dir = join(_script_dir, '_3rdparty')
         if platform.system() == 'Windows':
             return Windows(src_dir)
         else:
@@ -45,15 +45,13 @@ class Windows(Platform):
     def __init__(self, srcdir):
         super().__init__(srcdir)
         self.srcDir = srcdir
-        self.destParDir = srcdir
+        self.destParDir = join(self.srcDir, 'windows')
 
     def install_ffmpeg(self):
-        dest_dir = self.destParDir
-        append_to_os_paths(join(dest_dir, 'ffmpeg', 'bin'))
+        append_to_os_paths(join(self.destParDir, 'ffmpeg', 'bin'))
 
     def install_libsndfile(self):
-        dest_dir = self.destParDir
-        append_to_os_paths(join(dest_dir, 'libsndfile', 'bin'))
+        append_to_os_paths(join(self.destParDir, 'libsndfile', 'bin'))
 
     def _unzip(self, src, dest):
         os.makedirs(dest, exist_ok=True)

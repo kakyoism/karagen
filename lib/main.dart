@@ -128,9 +128,9 @@ class _MyHomePageState extends State<MyHomePage> {
     // print('status: ${result.exitCode}');
     // print('stdout: ${result.stdout}');
     // print('stderr: ${result.stderr}');
-    // final outfile = File(pathlib.join(outDirPath, 'stdout.txt'));
-    // final errfile = File(pathlib.join(outDirPath, 'stderr.txt'));
-    // final envfile = File(pathlib.join(outDirPath, 'stdenv.txt'));
+    // final outfile = File(pathlib.join(_outDirPath, 'stdout.txt'));
+    // final errfile = File(pathlib.join(_outDirPath, 'stderr.txt'));
+    // final envfile = File(pathlib.join(_outDirPath, 'stdenv.txt'));
     // await outfile.writeAsString(result.stdout);
     // await errfile.writeAsString(result.stderr);
     // await envfile.writeAsString(Platform.environment['PATH'].toString());
