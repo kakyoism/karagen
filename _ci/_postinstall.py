@@ -26,13 +26,14 @@ def main():
 class Platform:
     def __init__(self, *args):
         pass
+
     @staticmethod
     def create_platform():
-        src_dir = join(_script_dir, '_3rdparty')
+        dep_root = join(_script_dir, '_3rdparty')
         if platform.system() == 'Windows':
-            return Windows(src_dir)
+            return Windows(dep_root)
         else:
-            return Mac(src_dir)
+            return Mac(dep_root)
 
     def install_ffmpeg(self):
         raise NotImplementedError('subclass this')
@@ -42,9 +43,9 @@ class Platform:
 
 
 class Windows(Platform):
-    def __init__(self, srcdir):
-        super().__init__(srcdir)
-        self.srcDir = srcdir
+    def __init__(self, deproot):
+        super().__init__(deproot)
+        self.srcDir = deproot
         self.destParDir = join(self.srcDir, 'windows')
 
     def install_ffmpeg(self):
