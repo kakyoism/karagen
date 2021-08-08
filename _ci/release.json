@@ -1,0 +1,10 @@
+{
+  "title": "karagen",
+  "icon": "../_assets/parrot.icns",
+  "background": "../_assets/dmg.jpeg",
+  "contents": [
+    { "x": 650, "y": 378, "type": "link", "path": "/Applications" },
+    { "x": 362, "y": 378, "type": "file", "path": "_3rdparty/macos/karagen" },
+    { "x": 362, "y": 500, "type": "file", "path": "../README.html" }
+  ]
+}

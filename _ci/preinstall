@@ -1,0 +1,4 @@
+#! /bin/sh
+set -e
+echo "Running preinstall" > "$HOME"/Desktop/my_preinstall.log
+exit 0 # all good

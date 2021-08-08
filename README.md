@@ -13,25 +13,28 @@ What `karagen` is NOT
 
 ## Getting Ready
 
-**[WIP] The installer distribution is under construction ...**
-
-Windows
+### Windows
 
 - Double-click the `install_karagen_<version>.exe` to install `karagen`.
 - Accept all prompts when the installer attempt to change your registry key and permissions. 
 - If your anti-virus software prompts to block the installer activities, then do NOT block.
 - At the end of the installation, a post-install script will run automatically. Leave the checkmark on and click finish. Wait till the script finishes its job.
-- If your system uses a non-English locale, then ensure Unicode characters all use UTF-8 as their charset. Check this option in Control Panel's `Region`> `Administrative`settings if you have not.
+- If your system uses a non-English locale, then ensure Unicode characters all use UTF-8 as their charset. Check this option in Control Panel's `Region`> `Administrative`settings.
 
+### macOS
 
-macOS
-
-- Double-click the `install_karagen_<version>.pkg` to install `karagen`.
-
+- Double-click the `install_karagen_<version>.dmg` to mount the installer.
+- Drag the folder `karagen` into `/Applications` folder.
+- Open the builtin `Terminal.app` under `/Applications/Utilities`; It would be faster by pressing `F4` to call up `Launchpad` .
+- Ensure you have funtional internect connection; you may need a proxy or VPN in some countries.
+- In the open Terminal window, type in: `/Applications/karagen/install_karagen.sh` to install dependencies.
+- Double-click `/Applications/karagen/karagen.workflow` to install the service. Click `Install` to confirm when the system prompts.
 
 ## Getting Started
 
-To extract the accompaniment of a song
+To extract the accompaniment of a song, you must follow the platform-specific procedures below.
+
+### Windows
 
 - Click the button `Pick a Song`. 
 - Find a song using the pop-up file dialog, then click `Select Song`. Then the full path to the selected file will appear on the right side of the button.
@@ -39,6 +42,16 @@ To extract the accompaniment of a song
 - Find a target folder you want using the pop-up file dialog, then click `Select Folder`. Then the full path to the selected folder will appear on the right side of the button.
 - Click the floating `+` button at the bottom right of the window. The background worker will start doing the real work. 
 - Wait till the background worker finishes its job.
+
+### macOS
+
+- Open `Finder` and navigate to your target song file.
+- Right-click the song file and select `Quick Actions > karagen` or `Services > karagen`.
+- The first run will likely fail upfront, and you'll be prompted that `libsndfile.dylib` is  not trusted. Don't worry. Simply head for `System Preferences > Security & Privacy > General` to enable it.
+- Repeat the first two steps and the progress cogwheel will start spinning, showing `karagen` is at work.
+- Wait till the background worker finishes its job.
+
+### Results
 
 If all goes well, the system explorer will open the output folder, where you should see two files
 
@@ -62,6 +75,16 @@ Finally, let's start working on our hit cover `^_^`.
 
 
 ## Releases
+
+v0.2.1
+
+- Bug fixes.
+
+v0.2.0
+
+- Windows: Improved the installation experience.
+- macOS: Implemented platform-specific procedure
+- macOS: Added installer
 
 v0.1.7
 

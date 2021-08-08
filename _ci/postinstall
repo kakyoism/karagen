@@ -1,0 +1,4 @@
+#! /bin/sh
+set -e
+echo "Running postinstall" > "$HOME"/Desktop/my_postinstall.log
+exit 0 # all good
