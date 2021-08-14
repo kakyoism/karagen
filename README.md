@@ -78,6 +78,10 @@ Finally, let's start working on our hit cover `^_^`.
 
 ## Releases
 
+v0.2.2
+
+- macOS: Added installation support for mainland China users.
+
 v0.2.1
 
 - Bug fixes.
