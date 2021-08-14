@@ -25,10 +25,10 @@ What `karagen` is NOT
 
 - Double-click the `install_karagen_<version>.dmg` to mount the installer.
 - Drag the folder `karagen` into `/Applications` folder.
-- Open the builtin `Terminal.app` under `/Applications/Utilities`; It would be faster by pressing `F4` to call up `Launchpad` .
-- Ensure you have funtional internect connection; you may need a proxy or VPN in some countries.
-- In the open Terminal window, type in: `/Applications/karagen/install_karagen.sh` to install dependencies.
-- Double-click `/Applications/karagen/karagen.workflow` to install the service. Click `Install` to confirm when the system prompts.
+- Open the builtin `Terminal.app` under `/Applications/Utilities`; Alternatively, press `F4` to call up `Launchpad`.
+- Ensure you have a stable internet connection; you may need a proxy or VPN in some countries.
+- In the open Terminal window, type in: `/Applications/karagen/install_karagen.sh` and hit `Enter` to install dependencies. You could also drag the `.sh` file into the Terminal window and then hit `Enter` for a faster operation.
+- Go to the folder `/Applications/karagen`, double-click `karagen.workflow` to install it as a system service. Click `Install` to confirm when the system prompts to continue.
 
 ## Getting Started
 
@@ -48,7 +48,7 @@ To extract the accompaniment of a song, you must follow the platform-specific pr
 - Open `Finder` and navigate to your target song file.
 - Right-click the song file and select `Quick Actions > karagen` or `Services > karagen`.
 - The first run will likely fail upfront, and you'll be prompted that `libsndfile.dylib` is  not trusted. Don't worry. Simply head for `System Preferences > Security & Privacy > General` to enable it.
-- Repeat the first two steps and the progress cogwheel will start spinning, showing `karagen` is at work.
+- Repeat the first two steps, during which you might be prompted a few times for security again; simply confirm all the prompts, and the progress cogwheel will start spinning, showing `karagen` is at work.
 - Wait till the background worker finishes its job.
 - Note that the output folder is always `~/Desktop/karagen`.
 
