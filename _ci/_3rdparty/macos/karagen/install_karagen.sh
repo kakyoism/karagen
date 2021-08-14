@@ -6,9 +6,8 @@ UseAdminPasswd="You may be asked to type in admin password before moving forward
 
 # install homebrew
 Lazy_Install_With_Homebrew() {
-    Exe="$1"
-    Package="$2"
-    which "$Exe"
+    Package="$1"
+    brew list "$Package" || brew install "$Package"
     if [ "$?" -ne "0" ]; then
         if [[ ! -f "/usr/local/bin/brew" ]]; then
         	echo "Installing Xcode command-line tools ..."
@@ -62,27 +61,8 @@ if [ "$?" -ne "0" ]; then
 fi
 set -e
 
-set +e
-echo "Where is ffmpeg?"
-Lazy_Install_With_Homebrew ffmpeg ffmpeg
-if [ "$?" -ne "0" ]; then
-	set -e
-	echo "Installing ffmpeg ..."
-	echo "$UseAdminPasswd"
-	sudo cp $ScriptDir/ffmpeg /usr/local/bin
-fi
-set -e
-
-set +e
-echo "Where is libsndfile?"
-Lazy_Install_With_Homebrew "sndfile-play" libsndfile
-if [ "$?" -ne "0" ]; then
-	set -e
-	echo "Installing libsndfile ..."
-	echo "$UseAdminPasswd"
-	sudo cp $ScriptDir/libsndfile.dylib /usr/local/lib
-fi
-set -e
+Lazy_Install_With_Homebrew ffmpeg
+Lazy_Install_With_Homebrew libsndfile
 
 echo "** SUCCEEDED **"
 popd &> /dev/null

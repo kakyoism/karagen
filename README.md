@@ -27,6 +27,7 @@ What `karagen` is NOT
 - Drag the folder `karagen` into `/Applications` folder.
 - Open the builtin `Terminal.app` under `/Applications/Utilities`; Alternatively, press `F4` to call up `Launchpad`.
 - Ensure you have a stable internet connection; you may need a proxy or VPN in some countries.
+- *Optional*: If you are located in mainland China and does not have a VPN service that gives you access to the default servers of the pacakge manager `Homebrew `, you must open a Terminal window and type in: `/Applications/karagen/install_homebrew_cn.sh` and hit `Enter` to install `Homebrew` using a local server.
 - In the open Terminal window, type in: `/Applications/karagen/install_karagen.sh` and hit `Enter` to install dependencies. You could also drag the `.sh` file into the Terminal window and then hit `Enter` for a faster operation.
 - Go to the folder `/Applications/karagen`, double-click `karagen.workflow` to install it as a system service. Click `Install` to confirm when the system prompts to continue.
 
