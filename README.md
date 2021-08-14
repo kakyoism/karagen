@@ -146,5 +146,5 @@ v0.1.1
 
 ## Contact
 
-The issue tracker: https://github.com/kakyoism/karagen/issues
+For any usage questions and bug reports, visit [the issue tracker](https://github.com/kakyoism/karagen/issues).
 
