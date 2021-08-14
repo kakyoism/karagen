@@ -1,6 +1,6 @@
-# karagen
+# Overview
 
-`karagen` extracts the accompaniment track of a song, a much-needed tool for hardcore karaoke folks. `karagen` is powered by [`Deezer Spleeter`](https://research.deezer.com/projects/spleeter.html).
+When you are dying to cover your favouriate song but cannot find a published instrumental track for it, `karagen` is to the rescue. It helps you extract "the accompaniment track" from your local song file so that you could record your own performance on top of it. `karagen` is powered by [`Deezer Spleeter`](https://research.deezer.com/projects/spleeter.html).
 
 What `karagen` is
 
