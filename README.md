@@ -1,10 +1,10 @@
-# karagen
+# Overview
 
-`karagen` *extracts* the accompaniment track from a song, powered by [`Deezer Spleeter`](https://research.deezer.com/projects/spleeter.html).
+When you are dying to cover your favourite song but cannot find a published instrumental track for it, `karagen` is to the rescue. It helps you extract "the accompaniment track" from your local song file so that you could record your own performance on top of it.
 
 What `karagen` is
 
-- A frontend of `Spleeter`
+- A frontend of [`Deezer Spleeter`](https://research.deezer.com/projects/spleeter.html)
 - A workflow customized to serve karaoke enthusiasts who have trouble finding the official instrumental version of their favourite songs
 
 What `karagen` is NOT
@@ -121,7 +121,7 @@ v0.1.1
 
 ## Acknowledgements
 
-<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com/).
 
 
 
@@ -147,5 +147,5 @@ v0.1.1
 
 ## Contact
 
-The issue tracker: https://github.com/kakyoism/karagen/issues
+For tech support, visit [the issue tracker](https://github.com/kakyoism/karagen/issues).
 
