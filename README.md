@@ -27,9 +27,11 @@ What `karagen` is NOT
 - Drag the folder `karagen` into `/Applications` folder.
 - Open the builtin `Terminal.app` under `/Applications/Utilities`; Alternatively, press `F4` to call up `Launchpad`.
 - Ensure you have a stable internet connection; you may need a proxy or VPN in some countries.
-- *Optional*: If you are located in mainland China and does not have a VPN service that gives you access to the default servers of the pacakge manager `Homebrew `, you must open a Terminal window and type in: `/Applications/karagen/install_homebrew_cn.sh` and hit `Enter` to install `Homebrew` using a local server.
+- *Optional*: If you are located in mainland China and your internet service (with or without a VPN) does not give you access to the default servers of the pacakge manager `Homebrew `, you must install `Homebrew` using the bundled insstaller script:
+  - In the Terminal window, type in: `/Applications/karagen/install_homebrew_cn.sh` and hit `Enter`. 
+  - The script will list the available local Chinese servers. You must then pick one by entering its index and hit `Enter`.
 - In the open Terminal window, type in: `/Applications/karagen/install_karagen.sh` and hit `Enter` to install dependencies. You could also drag the `.sh` file into the Terminal window and then hit `Enter` for a faster operation.
-- Go to the folder `/Applications/karagen`, double-click `karagen.workflow` to install it as a system service. Click `Install` to confirm when the system prompts to continue.
+- In Finder, Go to the folder `/Applications/karagen`, double-click `karagen.workflow` (if your Finder hides file extensions, you will see a file named `karagen` with a telephone icon instead) to install the workflow as a system service. Click `Install` to confirm when the system prompts to continue.
 
 ## Getting Started
 
@@ -68,8 +70,8 @@ Finally, let's start working on our hit cover `^_^`.
 
 ## Limitations and Future Work
 
-- `Spleeter` needs to retrieve machine learning models from remote services, so it requires a stable internet connection (possiblly with a VPN in some countries), at least on the first run. To reduce the burden, we included a pretrained model in the distribution, but this may fall behind the upstream dev, so you might want to periodically remove the model so that `Spleeter` could have a chance to update it automatically.
-- We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to mix in the original backing-vocal segments, using an external audio editor app such as [`Audacity`](https://www.audacityteam.org/). 
+- `Spleeter` needs to retrieve machine learning models from remote services, so it requires a stable internet connection (possiblly with a VPN in some countries), at least on the first run. For your convenience, we include a snapshot of the pretrained model in the distribution. However, the snapshot may fall behind the upstream, so if you have the required internet condition, you might want to periodically remove the model so that the `Spleeter` backend could have a chance to update it automatically.
+- We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to inject the original backing-vocal segments, using an external audio editor app such as [`Audacity`](https://www.audacityteam.org/). 
 - We use the default parameters for the underlying algorithm, which isn't always perfect. For simplicity, we postpone the implementation of the parameter tweaks for power users until it proves absolutely necessary.
 - The output audio quality is bound by your input audio quality. Prefer using a high fidelity version of the song as your input file. Don't expect a better result just because the output format is `.wav` but your input is a low-bitrate `.mp3`.
 - Batch processing will be supported in future releases.
@@ -77,6 +79,10 @@ Finally, let's start working on our hit cover `^_^`.
 
 
 ## Releases
+
+v0.2.3
+
+- macOS: Added pretrained models to installer to avoid internet problems
 
 v0.2.2
 

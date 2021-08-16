@@ -1,6 +1,6 @@
 #! /bin/sh
 
-Version=0.2.2
+Version=0.2.3
 
 set -e
 
@@ -26,9 +26,12 @@ fi
 
 pandoc -s -o "${Guide_en}" README.md --metadata title="karagen: User Guide"
 cp "${Guide_en}" "$License" "$AppMasterDir"
-
+Models=pretrained_models
+cp -Rv _ci/"$Models" "$AppMasterDir"
 appdmg _ci/release.json "$Installer"
-
+if [[ -d "$AppMasterDir"/$Models ]]; then
+	rm -rf "$AppMasterDir"/$Models
+fi
 
 echo "** SUCCEEDED **"
 popd &> /dev/null
