@@ -16,7 +16,7 @@ What `karagen` is NOT
 ### Windows
 
 - Double-click the `install_karagen_<version>.exe` to install `karagen`.
-- Accept all prompts when the installer attempt to change your registry key and permissions. 
+- Accept all prompts when the installer attempts to change your registry key and permissions. 
 - If your anti-virus software prompts to block the installer activities, then do NOT block.
 - At the end of the installation, a post-install script will run automatically. Leave the checkmark on and click finish. Wait till the script finishes its job.
 - If your system uses a non-English locale, then ensure Unicode characters all use UTF-8 as their charset. Check this option in Control Panel's `Region`> `Administrative`settings.
@@ -25,22 +25,23 @@ What `karagen` is NOT
 
 - Double-click the `install_karagen_<version>.dmg` to mount the installer.
 - Drag the folder `karagen` into `/Applications` folder.
-- Open the builtin `Terminal.app` under `/Applications/Utilities`; Alternatively, press `F4` to call up `Launchpad`.
+- Open the builtin `Terminal.app` under `/Applications/Utilities`; Alternatively, press `F4` to call up `Launchpad`, and then type in `Terminal`.
 - Ensure you have a stable internet connection; you may need a proxy or VPN in some countries.
-- *Optional*: If you are located in mainland China and your internet service (with or without a VPN) does not give you access to the default servers of the pacakge manager `Homebrew `, you must install `Homebrew` using the bundled insstaller script:
+- *Optional*: If you are located in mainland China and your internet service (with or without a VPN) does not give you access to the default servers of the pacakge manager `Homebrew `, you must install `Homebrew` using the bundled installer script:
   - In the Terminal window, type in: `/Applications/karagen/install_homebrew_cn.sh` and hit `Enter`. 
   - The script will list the available local Chinese servers. You must then pick one by entering its index and hit `Enter`.
-- In the open Terminal window, type in: `/Applications/karagen/install_karagen.sh` and hit `Enter` to install dependencies. You could also drag the `.sh` file into the Terminal window and then hit `Enter` for a faster operation.
+- In the open Terminal window, type in: `/Applications/karagen/install_karagen.sh` and hit `Enter` to install dependencies. You could also drag the `.sh` file into the Terminal window and then hit `Enter` to speed it up a little.
 - In Finder, Go to the folder `/Applications/karagen`, double-click `karagen.workflow` (if your Finder hides file extensions, you will see a file named `karagen` with a telephone icon instead) to install the workflow as a system service. Click `Install` to confirm when the system prompts to continue.
 
 ## Getting Started
 
-To extract the accompaniment of a song, you must follow the platform-specific procedures below.
+To extract the accompaniment of a song, follow the platform-specific procedures below.
 
 ### Windows
 
+- Double-click the `karagen` desktop shortcut to bring up the UI.
 - Click the button `Pick a Song`. 
-- Find a song using the pop-up file dialog, then click `Select Song`. Then the full path to the selected file will appear on the right side of the button.
+- Find a song using the pop-up file dialog, then click `Select Song`. After that, the selected file path will appear on the right side of the button.
 - Click the button `Output Folder`.
 - Find a target folder you want using the pop-up file dialog, then click `Select Folder`. Then the full path to the selected folder will appear on the right side of the button.
 - Click the floating `+` button at the bottom right of the window. The background worker will start doing the real work. 
@@ -51,7 +52,7 @@ To extract the accompaniment of a song, you must follow the platform-specific pr
 - Open `Finder` and navigate to your target song file.
 - Right-click the song file and select `Quick Actions > karagen` or `Services > karagen`.
 - The first run will likely fail upfront, and you'll be prompted that `libsndfile.dylib` is  not trusted. Don't worry. Simply head for `System Preferences > Security & Privacy > General` to enable it.
-- Repeat the first two steps, during which you might be prompted a few times for security again; simply confirm all the prompts, and the progress cogwheel will start spinning, showing `karagen` is at work.
+- Repeat the first two steps, during which you might be prompted a few times for permissions again; simply confirm all the prompts, and the progress cogwheel will start spinning on the task bar, showing `karagen` is at work.
 - Wait till the background worker finishes its job.
 - Note that the output folder is always `~/Desktop/karagen`.
 
@@ -70,11 +71,13 @@ Finally, let's start working on our hit cover `^_^`.
 
 ## Limitations and Future Work
 
-- `Spleeter` needs to retrieve machine learning models from remote services, so it requires a stable internet connection (possiblly with a VPN in some countries), at least on the first run. For your convenience, we include a snapshot of the pretrained model in the distribution. However, the snapshot may fall behind the upstream, so if you have the required internet condition, you might want to periodically remove the model so that the `Spleeter` backend could have a chance to update it automatically.
-- We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to inject the original backing-vocal segments, using an external audio editor app such as [`Audacity`](https://www.audacityteam.org/). 
-- We use the default parameters for the underlying algorithm, which isn't always perfect. For simplicity, we postpone the implementation of the parameter tweaks for power users until it proves absolutely necessary.
+We are aware of the following limitations of `karagen` and will strive to improve upon them
+
+- `Spleeter` needs to retrieve machine learning models from remote services, so it requires a stable internet connection (possiblly with a VPN in some countries), at least on the first run. For your convenience, we include a snapshot of the pretrained model in the distribution. However, the snapshot may fall behind the upstream, so if you have an excellent internet condition, you might want to periodically remove the pre-installed model so that the `Spleeter` backend could have a chance to update the model automatically.
+- We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to inject the original backing-vocal segments, using an external audio editor such as [`Audacity`](https://www.audacityteam.org/). 
+- `Spleeter` 's algorithm is customizable. However, we use its default parameters, which isn't always perfect. For simplicity, we postpone the implementation of the parameter tweaks, which is for power users only.
 - The output audio quality is bound by your input audio quality. Prefer using a high fidelity version of the song as your input file. Don't expect a better result just because the output format is `.wav` but your input is a low-bitrate `.mp3`.
-- Batch processing will be supported in future releases.
+- Batch processing is not yet supported.
 
 
 
