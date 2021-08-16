@@ -134,7 +134,8 @@ v0.1.1
 
 ## Acknowledgements
 
-Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com/).
+- Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com/).
+- `Homebrew` installer for mainland China made by [cunkai.wang@foxmail.com](cunkai.wang@foxmail.com).
 
 
 
