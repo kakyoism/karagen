@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
       '-o',
       _outDirPath,
       '$_songPath'
-    ], workingDirectory: _outDirPath,
+    ],
     environment: {
       'PATH': sysPath,
     });
