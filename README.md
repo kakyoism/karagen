@@ -13,6 +13,14 @@ What `karagen` is NOT
 
 - A full-fledged intelligent solution towards source separation for arbitrary music
 
+
+
+## Getting karagen
+
+- Download the installer for our platform from [the project release page](https://github.com/kakyoism/karagen/releases)
+
+
+
 ## Getting Ready
 
 ### Windows
