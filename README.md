@@ -85,7 +85,7 @@ We are aware of the following limitations of `karagen` and will strive to improv
 
 - `Spleeter` needs to retrieve machine learning models from remote services, so it requires a stable internet connection (possiblly with a VPN in some countries), at least on the first run. For your convenience, we include a snapshot of the pretrained model in the distribution. However, the snapshot may fall behind the upstream, so if you have an excellent internet condition, you might want to periodically remove the pre-installed model so that the `Spleeter` backend could have a chance to update the model automatically.
 - We process the entire song, which may erase ALL the vocals including some backing vocals that you might intend to keep. A workaround is to do your own multi-track comping to inject the original backing-vocal segments, using an external audio editor such as [`Audacity`](https://www.audacityteam.org/). 
-- `Spleeter` 's algorithm is customizable. However, we use its default parameters, which isn't always perfect. For simplicity, we postpone the implementation of the parameter tweaks, which is for power users only.
+- `Spleeter` 's algorithm is customizable. However, we don't expose its parameters just yet and accepts their default values for simplicity. This is often good enough for a lot of songs, but it isn't always perfect. We consider exposing those parameters for power users in the future.
 - The output audio quality is bound by your input audio quality. Prefer using a high fidelity version of the song as your input file. Don't expect a better result just because the output format is `.wav` but your input is a low-bitrate `.mp3`.
 - Batch processing is not yet supported.
 
