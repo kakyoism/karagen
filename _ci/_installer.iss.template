@@ -32,6 +32,7 @@ SetupIconFile={#MyRootDir}\_assets\app_icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
+WizardImageFile={#MyRootDir}\_assets\parrot.png
 WizardSmallImageFile={#MyRootDir}\_assets\parrot_small.bmp
 SetupLogging=yes
 
