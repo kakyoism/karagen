@@ -11,7 +11,7 @@ What `karagen` is
 
 What `karagen` is NOT
 
-- A full-fledged intelligent solution towards source separation for arbitrary music
+- A full-fledged source separation solution for arbitrary music
 
 
 

@@ -54,7 +54,8 @@ _ci/_installer.iss
 */.idea/dictionaries
 */.idea/libraries
 */.idea/caches
-
+.idea/libraries/Dart_Packages.xml
+.idea/libraries/Flutter_Plugins.xml
 # Files and directories created by pub
 .dart_tool/
 .packages
