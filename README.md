@@ -17,7 +17,7 @@ What `karagen` is NOT
 
 ## Getting karagen
 
-- Download the installer for our platform from [the project release page](https://github.com/kakyoism/karagen/releases)
+- Download the installer for your platform from [the project release page](https://github.com/kakyoism/karagen/releases)
 
 
 
