@@ -2,7 +2,7 @@
 
 ## Overview
 
-Wanna cover a song but can't find its instrumental track? `karagen` is to the rescue. It helps you produce the "accompaniment tracks" straight from your own collection so that you could record your own performance on top of it.
+Wanna cover a song but can't find its instrumental track? `karagen` is to the rescue. It helps you produce the "accompaniment track" straight from your own collection so that you could record your own performance on top of it.
 
 What `karagen` is
 
